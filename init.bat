@@ -60,7 +60,27 @@ if %ERRORLEVEL% NEQ 0 (
 )
 echo VirtualBox is installed...
 
-REM TODO: check for cdk tools and vagrant box for windows.
+REM Ensure CDK downloaded.
+if exist %SRC_DIR%\%CDK% (
+        echo Product sources are present...
+        echo.
+) else (
+        echo Need to download %CDK% package from the Customer Support Portal
+        echo and place it in the %SRC_DIR% directory to proceed...
+        echo.
+        GOTO :EOF
+)
+
+REM Ensure correct Vagrant box downloaded.
+if exist %SRC_DIR%\%WINDOWS_BOX% (
+        echo Product sources are present...
+        echo.
+) else (
+        echo Need to download %WINDOWS_BOX% package from the Customer Support Portal
+        echo and place it in the %SRC_DIR% directory to proceed...
+        echo.
+        GOTO :EOF
+)
 
 REM Check for existing install.
 if exist "%CDK_HOME%" (
@@ -73,7 +93,8 @@ REM Run installation.
 echo Setting up installation now...
 echo.
 mkdir "%CDK_HOME%"
-REM TODO: unzip cdk tools into ./target
+
+cscript /nologo "%SUPPORT_DIR%/windows/unzip.vbs" %SRC_DIR%\%CDK% "%CDK_HOME%"
 
 echo Installing some Vagrant plugins...
 echo.
@@ -110,7 +131,7 @@ if %ERRORLEVEL% NEQ 0 (
   
 )
 
-echo Checking that $CDK_BOX_VERSION is listed...
+echo Checking that %CDK_BOX_VERSION% is listed...
 echo.
 call vagrant box list
 
@@ -158,7 +179,7 @@ echo =     $ vagrant init cdkv2                                         =
 echo =     $ vagrant up                                                 =
 echo =                                                                  =
 echo =                                                                  =
-echo =  This completes the %DEMO% setup.                     =             
+echo =  This completes the %DEMO% setup.                      =             
 echo =                                                                  =
 echo ====================================================================
 echo.
