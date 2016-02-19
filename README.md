@@ -1,5 +1,5 @@
-Container Development Kit (CDK) Install Demo
-============================================
+Container Development Kit Install Demo
+======================================
 If you are looking to develop containerized applications for Red Hat Enterprise
 Linux systems, the Red Hat Container Development Kit (CDK) can help you by providing 
 a Red Hat container development environment you can install locally. It includes the 
