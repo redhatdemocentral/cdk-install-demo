@@ -10,7 +10,7 @@ PRJ_DIR=./projects
 CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
 CDK=cdk-2.0.0-beta4.zip
 OSX_BOX=rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-virtualbox.box
-LINUX_BOX=
+LINUX_BOX=rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-libvirt.box
 CDK_BOX_VERSION=cdkv2
 VERSION=2.0.0-beta4
 
@@ -70,9 +70,7 @@ fi
 # Ensure correct Vagrant box downloaded.
 #
 if [[ `uname` == 'Darwin' ]]; then
-
 	# OSX Vagrant box.
-	#
 	if [[ -r $SRC_DIR/$OSX_BOX ]] || [[ -L $SRC_DIR/$OSX_BOX ]]; then
 		echo OSX Vagrant box present...
 	  echo
@@ -82,11 +80,8 @@ if [[ `uname` == 'Darwin' ]]; then
 	  echo
 	  exit
   fi
-
 else
-
 	# Linux Vagrant box.
-	#
 	if [[ -r $SRC_DIR/$LINUX_BOX ]] || [[ -L $SRC_DIR/$LINUX_BOX ]]; then
 		echo Linux Vagrant box present...
 	  echo
@@ -96,7 +91,6 @@ else
 	  echo
 	  exit
   fi
-
 fi
 
 # Remove the old insallation, if it exists.
@@ -127,11 +121,23 @@ echo "  -> landrush"
 echo
 vagrant plugin list
 
-echo
-echo "Adding the RHEL Vagrant box..."
-echo
+# determine which Vagrant box to add.
+#
 cd ../../../
-vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$OSX_BOX
+if [[ `uname` == 'Darwin' ]]; then
+	# OSX Vagrant box.
+	echo
+  echo "Adding the RHEL Vagrant box..."
+  echo
+  vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$OSX_BOX
+else 
+	# Linux Vagrant box.
+	#
+	echo
+  echo "Adding the libvirt Vagrant box..."
+  echo
+  vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$LINUX_BOX
+fi
 
 if [ $? -ne 0 ]; then
   echo
@@ -142,9 +148,21 @@ if [ $? -ne 0 ]; then
 	vagrant box remove $CDK_BOX_VERSION
 
 	echo 
-  echo "Cleanup done, re-trying the openshift-install-demo installation."
+  echo "Cleanup done, re-trying the installation."
   echo
-  vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$OSX_BOX
+	if [[ `uname` == 'Darwin' ]]; then
+		# OSX Vagrant box.
+	  echo
+    echo "Adding the RHEL Vagrant box..."
+    echo
+    vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$OSX_BOX
+  else 
+	  # Linux Vagrant box.
+	  echo
+    echo "Adding the libvirt Vagrant box..."
+    echo
+    vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$LINUX_BOX
+  fi
 fi
 
 echo
@@ -153,50 +171,51 @@ echo
 vagrant box list
 
 echo
-echo "==================================================================="
-echo "=                                                                 ="
-echo "= After adding to path, you can use 'oc' from CLI to login:       ="
-echo "=                                                                 ="
-echo "=  $ oc login https://10.2.2.2                                    ="
-echo "=                                                                 ="
-echo "=  Authentication required for https://10.2.2.2:8443 (openshift)  ="
-echo "=  Username: {insert-any-login-here}                              ="
-echo "=                                                                 ="
-echo "=  Login successful.                                              ="
-echo "=                                                                 ="
-echo "=  You don't have any projects. You can try to create a new       ="
-echo "=  project, by running:                                           ="
-echo "=                                                                 ="
-echo "=  $ oc new-project                                               ="
-echo "=                                                                 ="
-echo "==================================================================="
-echo
-echo "==================================================================="
-echo "=                                                                 ="
-echo "= Now login via browser to OpenShift: https://10.2.2.2:8443       ="
-echo "=                                                                 ="
-echo "= To stop this demo use the following command:                    ="
-echo "=                                                                 ="
-echo "=  $ vagrant halt                                                 ="
-echo "=                                                                 ="
-echo "= $DEMO Setup Complete.                           ="
-echo "=                                                                 ="
-echo "==================================================================="
-echo
-
-
-exit
-# Ensure Vagrant setup for target systems.
-if [[ `uname` == 'Darwin' ]]; then
-	# OSX does not require any actions.
-else 
-	# Linux needs some Vagrant setup.
-	#
-  # TODO.
-fi
-
-
-
-vagrant up --provider=virtualbox
-
+echo "===================================================================="
+echo "=                                                                  ="
+echo "=  Now you can start up pre-defined Vagrant boxes using the        ="
+echo "=  provided Vagrant files or you can initialze an empty box and    ="
+echo "=  create your own Vagrant file.                                   ="
+echo "=                                                                  ="
+echo "=  For example, using a provided Vagrant file means going to its   ="
+echo "=  directory and start a RHEL CDK Vagrant box.                     ="
+echo "=                                                                  ="
+echo "=  Three Vagrant files are provided with the CDK for uses cases    ="
+echo "=  described below as we show you how to start each below.         ="
+echo "=                                                                  ="
+echo "=                                                                  ="
+echo "=  1. Docker Eclipse integration (rhel-docker-eclipse):            ="
+echo "=                                                                  ="
+echo "=     $ cd ./target/cdk/components/rhel/rhel-docker-eclipse        ="
+echo "=                                                                  ="
+echo "=     $ vagrant up                                                 ="
+echo "=                                                                  ="
+echo "=                                                                  ="
+echo "=  2. Single-node Kubernetes setup (rhel-k8s-singlenode-setup):    ="
+echo "=                                                                  ="
+echo "=     $ cd ./target/cdk/components/rhel/rhel-k8s-singlenode-setup  ="
+echo "=                                                                  ="
+echo "=     $ vagrant up                                                 ="
+echo "=                                                                  ="
+echo "=                                                                  ="
+echo "=  3. Single-node Kubernetes setup (rhel-k8s-singlenode-setup):    ="
+echo "=                                                                  ="
+echo "=     $ cd ./target/cdk/components/rhel/rhel-ose                   ="
+echo "=                                                                  ="
+echo "=     $ vagrant up                                                 ="
+echo "=                                                                  ="
+echo "=                                                                  ="
+echo "=  Finally, initialize a Vagrant box for using your own Vagrant    ="
+echo "=  file (make your own):                                           ="
+echo "=                                                                  ="
+echo "=     $ mkdir ./target/mycdkv2                                     ="
+echo "=     $ cd ./target/mycdkv2                                        ="
+echo "=     $ vagrant init cdkv2                                         ="
+echo "=     $ vagrant up                                                 ="
+echo "=                                                                  ="
+echo "=                                                                  ="
+echo "=  This completes the $DEMO setup.                      ="              
+echo "=                                                                  ="
+echo "===================================================================="
+echo                                                                    
 
