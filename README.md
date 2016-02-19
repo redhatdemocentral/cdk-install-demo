@@ -11,9 +11,11 @@ Option 1 - Install on your machine
 ----------------------------------
 1. [Download and unzip.](https://github.com/eschabell/cdk-install-demo/archive/master.zip)
 
-2. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
+2. Add products as needed (see installs directory).
 
-3. Read and follow displayed instructions and enjoy the Red Hat Container Development Kit (CDK) on your local machine!
+3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
+
+4. Read and follow displayed instructions and enjoy the Red Hat Container Development Kit (CDK) on your local machine!
 
 
 Supporting Articles
