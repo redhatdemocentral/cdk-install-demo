@@ -4,7 +4,9 @@ If you are looking to develop containerized applications for Red Hat Enterprise
 Linux systems, the Red Hat Container Development Kit (CDK) can help you by providing 
 a Red Hat container development environment you can install locally. It includes the 
 same container development and run-time tools used to create and deploy containers 
-for large data centers. For more [see the online documentation](https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/)
+for large data centers. 
+
+To get started with the provided pre-configured containers, [see the online documentation.](https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/)
 
 
 Option 1 - Install on your machine
