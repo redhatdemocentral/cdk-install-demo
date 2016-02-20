@@ -24,7 +24,7 @@ Option 1 - Install on your machine
 
 Supporting Articles
 -------------------
-- coming soon...
+- [How to install Red Hat Container Development Kit (CDK) in minutes](http://www.schabell.org/2016/02/howto-install-redhat-cdk-in-minutes.html)
 
 
 Released versions
