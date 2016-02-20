@@ -22,6 +22,35 @@ Option 1 - Install on your machine
 4. Read and follow displayed instructions and enjoy the Red Hat Container Development Kit (CDK) on your local machine!
 
 
+Getting started
+---------------
+The following containers can be started after installing this project for you to start exploring:
+
+OpenShift Enterprise - a containerized version of OpenShift Enterprise can be started that can be accesses through a Web console in
+your browser or via the OpenShift command line tools. Explore your very own private PaaS developer experience with this container.
+``
+  $ cd ./target/cdk/components/rhel/rhel-ose
+
+  $ vagrant up
+``
+
+Kubernetes - a container to set you up for exploring a Kubernetes cluster. It is setup to run as an all-in-one Kubernetes master to
+manage pods and node for running multiple pods.
+``
+  $ cd ./target/cdk/components/rhel/rhel-ose
+
+  $ vagrant up 
+``
+
+Eclipse - a container setup for you to use the Eclipse IDE with a Linux Tools/Docker Tooling plug-in allowing developers to manage
+containers directly from their development environment.
+``
+  $ cd ./target/cdk/components/rhel/rhel-docker-eclipse
+
+  $ vagrant up 
+``
+
+
 Supporting Articles
 -------------------
 - [How to install Red Hat Container Development Kit (CDK) in minutes](http://www.schabell.org/2016/02/howto-install-redhat-cdk-in-minutes.html)
