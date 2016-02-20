@@ -34,19 +34,15 @@ your browser or via the OpenShift command line tools. Explore your very own priv
 
 Kubernetes - a container to set you up for exploring a Kubernetes cluster. It is setup to run as an all-in-one Kubernetes master to
 manage pods and node for running multiple pods.
-``
-  $ cd ./target/cdk/components/rhel/rhel-ose
-
-  $ vagrant up 
-``
+  
+     $ cd ./target/cdk/components/rhel/rhel-ose
+     $ vagrant up 
 
 Eclipse - a container setup for you to use the Eclipse IDE with a Linux Tools/Docker Tooling plug-in allowing developers to manage
 containers directly from their development environment.
-``
-  $ cd ./target/cdk/components/rhel/rhel-docker-eclipse
-
-  $ vagrant up 
-``
+  
+     $ cd ./target/cdk/components/rhel/rhel-docker-eclipse
+     $ vagrant up 
 
 
 Supporting Articles
