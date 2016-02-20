@@ -28,6 +28,7 @@ The following containers can be started after installing this project for you to
 
 OpenShift Enterprise - a containerized version of OpenShift Enterprise can be started that can be accesses through a Web console in
 your browser or via the OpenShift command line tools. Explore your very own private PaaS developer experience with this container.
+
 ``
   $ cd ./target/cdk/components/rhel/rhel-ose
 
