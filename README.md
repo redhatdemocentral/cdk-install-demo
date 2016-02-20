@@ -32,6 +32,10 @@ your browser or via the OpenShift command line tools. Explore your very own priv
      $ cd ./target/cdk/components/rhel/rhel-ose
      $ vagrant up
 
+     OpenShift console available at: https://10.1.2.2:8443/console
+     Login: test-user
+     Password: test-user
+
 Kubernetes - a container to set you up for exploring a Kubernetes cluster. It is setup to run as an all-in-one Kubernetes master to
 manage pods and node for running multiple pods.
   
