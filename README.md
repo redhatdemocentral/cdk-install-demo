@@ -60,6 +60,5 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - based on CDK 2.0.0 beta 1 and RHEL Vagrant boxes 7.2-13.
 
-
-![Install 1](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/install-1.png?raw=true)
+![CDK OSE](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
 
