@@ -12,7 +12,7 @@ set SUPPORT_DIR=%PROJECT_HOME%support
 set PRJ_DIR=%PROJECT_HOME%projects
 set CDK_PLUGINS_DIR=%CDK_HOME%\cdk\plugins
 set CDK=cdk-2.0.0-beta4.zip
-set WINDOWS_BOX=rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-vmware-fusion.box
+set WINDOWS_BOX=rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-virtualbox.box
 set CDK_BOX_VERSION=cdkv2
 set VERSION=2.0.0-beta4
 
