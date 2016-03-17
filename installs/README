@@ -1,16 +1,16 @@
 Download the following from the Red Hat Customer Portal
 
- * CDK (cdk-2.0.0-beta4.zip)
- * OSX - RHEL VirtualBox (rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-virtualbox.box)
- * Linux - RHEL libvirt (rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-libvirt.box)
- * Windows - RHEL VMWare (rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-vmware-fusion.box)
+ * CDK (cdk-2.0.0-beta5.zip)
+ * OSX - RHEL VirtualBox (rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box)
+ * Linux - RHEL libvirt (rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-libvirt.box)
+ * Windows - RHEL VMWare (rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-vmware-fusion.box)
 
 and copy to this directory for the init script to work.
 
 Ensure that this file is executable by running:
 
-chmod +x <path-to-project>/installs/cdk-2.0.0-beta4.zip
-chmod +x <path-to-project>/installs/rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-virtualbox.box
-chmod +x <path-to-project>/installs/rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-libvirt.box
-chmod +x <path-to-project>/installs/rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-vmware-fusion.box
+chmod +x <path-to-project>/installs/cdk-2.0.0-beta5.zip
+chmod +x <path-to-project>/installs/rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box
+chmod +x <path-to-project>/installs/rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-libvirt.box
+chmod +x <path-to-project>/installs/rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-vmware-fusion.box
 

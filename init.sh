@@ -1,18 +1,18 @@
 #!/bin/sh 
 DEMO="CDK Install Demo"
 AUTHORS="Andrew Block, Eric D. Schabell"
-PROJECT="git@github.com:eschabell/-demo.git"
+PROJECT="git@github.com:eschabell/cdk-install-demo.git"
 PRODUCT="Container Development Kit"
 CDK_HOME=./target
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
 CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
-CDK=cdk-2.0.0-beta4.zip
-OSX_BOX=rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-virtualbox.box
-LINUX_BOX=rhel-cdk-kubernetes-7.2-13.x86_64.vagrant-libvirt.box
+CDK=cdk-2.0.0-beta5.zip
+OSX_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box
+LINUX_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-libvirt.box
 CDK_BOX_VERSION=cdkv2
-VERSION=2.0.0-beta4
+VERSION=2.0.0-beta5
 
 # wipe screen.
 clear 
@@ -38,7 +38,7 @@ echo "##                                                           ##"
 echo "##                                                           ##"   
 echo "##  brought to you by ${AUTHORS}         ##"
 echo "##                                                           ##"   
-echo "##  ${PROJECT}                       ##"
+echo "##  ${PROJECT}            ##"
 echo "##                                                           ##"   
 echo "###############################################################"
 echo
@@ -110,14 +110,13 @@ unzip -q $SRC_DIR/$CDK -d $CDK_HOME
 echo "Installing some Vagrant plugins..."
 echo
 cd $CDK_PLUGINS_DIR
-vagrant plugin install vagrant-registration vagrant-adbinfo landrush
+vagrant plugin install vagrant-registration vagrant-service-manager
 
 echo
 echo "Checking that plugins installed, looking for:"
 echo 
 echo "  -> vagrant-registration"
-echo "  -> vagrant-adbinfo"
-echo "  -> landrush"
+echo "  -> vagrant-service-manager"
 echo
 vagrant plugin list
 
@@ -171,51 +170,45 @@ echo
 vagrant box list
 
 echo
-echo "===================================================================="
-echo "=                                                                  ="
-echo "=  Now you can start up pre-defined Vagrant boxes using the        ="
-echo "=  provided Vagrant files or you can initialze an empty box and    ="
-echo "=  create your own Vagrant file.                                   ="
-echo "=                                                                  ="
-echo "=  For example, using a provided Vagrant file means going to its   ="
-echo "=  directory and start a RHEL CDK Vagrant box.                     ="
-echo "=                                                                  ="
-echo "=  Three Vagrant files are provided with the CDK for uses cases    ="
-echo "=  described below as we show you how to start each below.         ="
-echo "=                                                                  ="
-echo "=                                                                  ="
-echo "=  1. Docker Eclipse integration (rhel-docker-eclipse):            ="
-echo "=                                                                  ="
-echo "=     $ cd ./target/cdk/components/rhel/rhel-docker-eclipse        ="
-echo "=                                                                  ="
-echo "=     $ vagrant up                                                 ="
-echo "=                                                                  ="
-echo "=                                                                  ="
-echo "=  2. Single-node Kubernetes setup (rhel-k8s-singlenode-setup):    ="
-echo "=                                                                  ="
-echo "=     $ cd ./target/cdk/components/rhel/rhel-k8s-singlenode-setup  ="
-echo "=                                                                  ="
-echo "=     $ vagrant up                                                 ="
-echo "=                                                                  ="
-echo "=                                                                  ="
-echo "=  3. OpenShift Enterprise (rhel-ose):                             ="
-echo "=                                                                  ="
-echo "=     $ cd ./target/cdk/components/rhel/rhel-ose                   ="
-echo "=                                                                  ="
-echo "=     $ vagrant up                                                 ="
-echo "=                                                                  ="
-echo "=                                                                  ="
-echo "=  Finally, initialize a Vagrant box for using your own Vagrant    ="
-echo "=  file (make your own):                                           ="
-echo "=                                                                  ="
-echo "=     $ mkdir ./target/mycdkv2                                     ="
-echo "=     $ cd ./target/mycdkv2                                        ="
-echo "=     $ vagrant init cdkv2                                         ="
-echo "=     $ vagrant up                                                 ="
-echo "=                                                                  ="
-echo "=                                                                  ="
-echo "=  This completes the $DEMO setup.                      ="              
-echo "=                                                                  ="
-echo "===================================================================="
+echo "========================================================================="
+echo "=                                                                       ="
+echo "=  Now you can start up pre-defined Vagrant boxes using the provided    ="
+echo "=  Vagrant files or you can initialze an empty box and create your own  ="
+echo "=  Vagrant file.                                                        ="
+echo "=                                                                       ="
+echo "=  For example, using a provided Vagrant file means going to its        ="
+echo "=  directory and start a RHEL CDK Vagrant box.                          ="
+echo "=                                                                       ="
+echo "=  Two Vagrant files are provided with the CDK for uses cases           ="
+echo "=  described below as we show you how to start each below.              ="
+echo "=                                                                       ="
+echo "=                                                                       ="
+echo "=  1. OpenShift Enterprise (rhel-ose):                                  ="
+echo "=                                                                       ="
+echo "=     $ cd ./target/cdk/components/rhel/rhel-ose                        ="
+echo "=                                                                       ="
+echo "=     $ vagrant up                                                      ="
+echo "=                                                                       ="
+echo "=     $ vagrant provision   # if OpenShift fails, repeat until          ="
+echo "=                           # it starts up.                             ="
+echo "=                                                                       ="
+echo "=                                                                       ="
+echo "=  2. Single-node Kubernetes setup (rhel-k8s-singlenode-setup):         ="
+echo "=                                                                       ="
+echo "=     $ cd ./target/cdk/components/rhel/misc/rhel-k8s-singlenode-setup  ="
+echo "=                                                                       ="
+echo "=     $ vagrant up                                                      ="
+echo "=                                                                       ="
+echo "=                                                                       ="
+echo "=  Finally, initialize a Vagrant box for using your own Vagrant file:   ="
+echo "=                                                                       ="
+echo "=     $ mkdir ./target/mycdkv2                                          ="
+echo "=     $ cd ./target/mycdkv2                                             ="
+echo "=     $ vagrant init cdkv2                                              ="
+echo "=     $ vagrant up                                                      ="
+echo "=                                                                       ="
+echo "=  This completes the $DEMO setup.                           ="              
+echo "=                                                                       ="
+echo "========================================================================="
 echo                                                                    
 

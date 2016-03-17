@@ -31,6 +31,7 @@ your browser or via the OpenShift command line tools. Explore your very own priv
 
      $ cd ./target/cdk/components/rhel/rhel-ose
      $ vagrant up
+     $ vagrant provision     # if OpenShift fails, repeat until it starts up.
 
      OpenShift console available at: https://10.1.2.2:8443/console
      Login as any user and any password.
@@ -38,13 +39,7 @@ your browser or via the OpenShift command line tools. Explore your very own priv
 Kubernetes - a container to set you up for exploring a Kubernetes cluster. It is setup to run as an all-in-one Kubernetes master to
 manage pods and node for running multiple pods.
   
-     $ cd ./target/cdk/components/rhel/rhel-ose
-     $ vagrant up 
-
-Eclipse - a container setup for you to use the Eclipse IDE with a Linux Tools/Docker Tooling plug-in allowing developers to manage
-containers directly from their development environment.
-  
-     $ cd ./target/cdk/components/rhel/rhel-docker-eclipse
+     $ cd ./target/cdk/components/rhel/misc/rhel-k8s-singlenode-setup
      $ vagrant up 
 
 
@@ -57,7 +52,9 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
-- v1.0 - based on CDK 2.0.0 beta 1 and RHEL Vagrant boxes 7.2-13.
+- v1.1 - based on CDK 2.0.0 beta 5 and RHEL Vagrant boxes 7.2-21.
+
+- v1.0 - based on CDK 2.0.0 beta 4 and RHEL Vagrant boxes 7.2-13.
 
 ![CDK OSE](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
 
