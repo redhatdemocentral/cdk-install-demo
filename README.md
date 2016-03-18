@@ -31,7 +31,6 @@ your browser or via the OpenShift command line tools. Explore your very own priv
 
      $ cd ./target/cdk/components/rhel/rhel-ose
      $ vagrant up
-     $ vagrant provision     # if OpenShift fails, repeat until it starts up.
 
      OpenShift console available at: https://10.1.2.2:8443/console
      Login as any user and any password.
