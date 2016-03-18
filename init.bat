@@ -96,6 +96,12 @@ mkdir "%CDK_HOME%"
 
 cscript /nologo "%SUPPORT_DIR%/windows/unzip.vbs" %SRC_DIR%\%CDK% "%CDK_HOME%"
 
+REM Add memory adjusted Vagrantfile for OSE image.
+REM
+echo Copying over VagrantFile with rhel-ose larger memory settings...
+echo.
+call cp %SUPPORT_DIR%\%VAGRANTFILE% %CDK_HOME%\cdk\components\rhel\rhel-ose\Vagrantfile
+
 echo Installing some Vagrant plugins...
 echo.
 cd "%CDK_PLUGINS_DIR%"

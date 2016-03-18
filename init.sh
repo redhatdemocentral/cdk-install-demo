@@ -11,6 +11,7 @@ CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
 CDK=cdk-2.0.0-beta5.zip
 OSX_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box
 LINUX_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-libvirt.box
+VAGRANTFILE=VagrantFile-rhel-ose
 CDK_BOX_VERSION=cdkv2
 VERSION=2.0.0-beta5
 
@@ -102,10 +103,17 @@ if [[ -x $CDK_HOME ]]; then
 fi
 
 # Run installation.
+#
 echo "Setting up installation now..."
 echo
 mkdir $CDK_HOME
 unzip -q $SRC_DIR/$CDK -d $CDK_HOME
+
+# Add memory adjusted Vagrantfile for OSE image.
+#
+echo "Copying over VagrantFile with rhel-ose larger memory settings..."
+echo
+cp $SUPPORT_DIR/$VAGRANTFILE $CDK_HOME/cdk/components/rhel/rhel-ose/Vagrantfile
 
 echo "Installing some Vagrant plugins..."
 echo
