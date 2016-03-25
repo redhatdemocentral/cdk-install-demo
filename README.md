@@ -44,6 +44,8 @@ manage pods and node for running multiple pods.
 
 Supporting Articles
 -------------------
+- [Digital sign for Red Hat Container Development Kit (CDK)](http://www.schabell.org/2016/03/digital-sign-redhat-cdk.html)
+
 - [How to install Red Hat Container Development Kit (CDK) in minutes](http://www.schabell.org/2016/02/howto-install-redhat-cdk-in-minutes.html)
 
 
@@ -54,6 +56,8 @@ See the tagged releases for the following versions of the product:
 - v1.1 - based on CDK 2.0.0 beta 5 and RHEL Vagrant boxes 7.2-21.
 
 - v1.0 - based on CDK 2.0.0 beta 4 and RHEL Vagrant boxes 7.2-13.
+
+![Digital sign](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/red_hat_cdk_install_demo.jpg?raw=true)
 
 ![CDK OSE](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
 
