@@ -4,7 +4,7 @@ setlocal
 set PROJECT_HOME=%~dp0
 set DEMO=CDK Install Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
-set PROJECT=git@github.com:eschabell/cdk-install-demo.git
+set PROJECT=git@github.com:redhatdemocentral/cdk-install-demo.git
 set PRODUCT=Container Development Kit
 set CDK_HOME=%PROJECT_HOME%target
 set SRC_DIR=%PROJECT_HOME%installs
@@ -21,29 +21,29 @@ cls
 
 
 echo.
-echo ###############################################################
-echo ##                                                           ##
-echo ##  Setting up the %DEMO%                     ##
-echo ##                                                           ##
-echo ##                                                           ##
-echo ##    ####  ###  #   # #####  ###  ##### #   # ##### ####    ##
-echo ##   #     #   # ##  #   #   #   #   #   ##  # #     #   #   ##
-echo ##   #     #   # # # #   #   #####   #   # # # ###   ####    ##
-echo ##   #     #   # #  ##   #   #   #   #   #  ## #     #  #    ##
-echo ##    ###   ###  #   #   #   #   # ##### #   # ##### #   #   ##
-echo ##                                                           ##   
-echo ##            ####  ##### #   #   #   # ##### #####          ##
-echo ##            #   # #     #   #   #  #    #     #            ##
-echo ##            #   # ###   #   #   ###     #     #            ##
-echo ##            #   # #      # #    #  #    #     #            ##
-echo ##            ####  #####   #     #   # #####   #            ##
-echo ##                                                           ##
-echo ##                                                           ##
-echo ##  brought to you by %AUTHORS%        ##
-echo ##                                                           ##
-echo ##  %PROJECT%    ##
-echo ##                                                           ##
-echo ###############################################################
+echo #######################################################################
+echo ##                                                                   ##
+echo ##  Setting up the %DEMO%                             ##
+echo ##                                                                   ##
+echo ##                                                                   ##
+echo ##    ####  ###  #   # #####  ###  ##### #   # ##### ####            ##
+echo ##   #     #   # ##  #   #   #   #   #   ##  # #     #   #           ##
+echo ##   #     #   # # # #   #   #####   #   # # # ###   ####            ##
+echo ##   #     #   # #  ##   #   #   #   #   #  ## #     #  #            ##
+echo ##    ###   ###  #   #   #   #   # ##### #   # ##### #   #           ##
+echo ##                                                                   ##   
+echo ##            ####  ##### #   #   #   # ##### #####                  ##
+echo ##            #   # #     #   #   #  #    #     #                    ##
+echo ##            #   # ###   #   #   ###     #     #                    ##
+echo ##            #   # #      # #    #  #    #     #                    ##
+echo ##            ####  #####   #     #   # #####   #                    ##
+echo ##                                                                   ##
+echo ##                                                                   ##
+echo ##  brought to you by %AUTHORS%                ##
+echo ##                                                                   ##
+echo ##  %PROJECT%  ##
+echo ##                                                                   ##
+echo #######################################################################
 echo.
 
 call where vagrant >nul 2>&1

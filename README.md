@@ -13,7 +13,7 @@ If you are fairly new to container development, see the online [Getting Started 
 
 Option 1 - Install on your machine
 ----------------------------------
-1. [Download and unzip.](https://github.com/eschabell/cdk-install-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/redhatdemocentral/cdk-install-demo/archive/master.zip)
 
 2. Add products as needed (see installs directory).
 
@@ -57,7 +57,7 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - based on CDK 2.0.0 beta 4 and RHEL Vagrant boxes 7.2-13.
 
-![Digital sign](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/red_hat_cdk_install_demo.jpg?raw=true)
+![Digital sign](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/red_hat_cdk_install_demo.jpg?raw=true)
 
-![CDK OSE](https://github.com/eschabell/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
+![CDK OSE](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
 
