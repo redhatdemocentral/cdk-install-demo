@@ -1,4 +1,4 @@
-Download the following from the Red Hat Customer Portal
+Download the following from the Red Hat Developer (http://developers.redhat.com/products/cdk/get-started):
 
  * CDK (cdk-2.0.0-beta5.zip)
  * OSX - RHEL VirtualBox (rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box)

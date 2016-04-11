@@ -15,7 +15,7 @@ Option 1 - Install on your machine
 ----------------------------------
 1. [Download and unzip.](https://github.com/redhatdemocentral/cdk-install-demo/archive/master.zip)
 
-2. Add products as needed (see installs directory).
+2. Add products as needed, see installs directory for list, [free downloads here](http://developers.redhat.com/products/cdk/get-started/).
 
 3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
 
