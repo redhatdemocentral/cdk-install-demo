@@ -53,6 +53,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.3 - based on CDK 2.0.0 and RHEL Vagrant boxes 7.2-23.
+
 - v1.2 - based on CDK 2.0.0 beta 5, RHEL Vagrant boxes 7.2-21 now freely available on developer.redhat.com.
 
 - v1.1 - based on CDK 2.0.0 beta 5 and RHEL Vagrant boxes 7.2-21.

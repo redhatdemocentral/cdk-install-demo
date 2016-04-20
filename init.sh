@@ -8,12 +8,12 @@ SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
 CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
-CDK=cdk-2.0.0-beta5.zip
-OSX_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box
-LINUX_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-libvirt.box
+CDK=cdk-2.0.0.zip
+OSX_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-virtualbox.box
+LINUX_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-libvirt.box
 VAGRANTFILE=VagrantFile-rhel-ose
 CDK_BOX_VERSION=cdkv2
-VERSION=2.0.0-beta5
+VERSION=2.0.0
 
 # wipe screen.
 clear 
@@ -118,13 +118,14 @@ cp $SUPPORT_DIR/$VAGRANTFILE $CDK_HOME/cdk/components/rhel/rhel-ose/Vagrantfile
 echo "Installing some Vagrant plugins..."
 echo
 cd $CDK_PLUGINS_DIR
-vagrant plugin install vagrant-registration vagrant-service-manager
+vagrant plugin install vagrant-registration vagrant-service-manager vagrant-sshfs
 
 echo
 echo "Checking that plugins installed, looking for:"
 echo 
 echo "  -> vagrant-registration"
 echo "  -> vagrant-service-manager"
+echo "  -> vagrant-sshfs"
 echo
 vagrant plugin list
 

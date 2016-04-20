@@ -11,10 +11,10 @@ set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%support
 set PRJ_DIR=%PROJECT_HOME%projects
 set CDK_PLUGINS_DIR=%CDK_HOME%\cdk\plugins
-set CDK=cdk-2.0.0-beta5.zip
-set WINDOWS_BOX=rhel-cdk-kubernetes-7.2-21.x86_64.vagrant-virtualbox.box
+set CDK=cdk-2.0.0.zip
+set WINDOWS_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-virtualbox.box
 set CDK_BOX_VERSION=cdkv2
-set VERSION=2.0.0-beta5
+set VERSION=2.0.0
 
 REM wipe screen.
 cls
@@ -105,13 +105,14 @@ call cp %SUPPORT_DIR%\%VAGRANTFILE% %CDK_HOME%\cdk\components\rhel\rhel-ose\Vagr
 echo Installing some Vagrant plugins...
 echo.
 cd "%CDK_PLUGINS_DIR%"
-call vagrant plugin install vagrant-registration vagrant-service-manager
+call vagrant plugin install vagrant-registration vagrant-service-manager vagrant-sshfs
 
 echo.
 echo Checking that plugins installed, looking for:
 echo. 
 echo  - vagrant-registration
 echo  - vagrant-service-manager
+echo  - vagrant-sshfs
 echo.
 call vagrant plugin list
 
