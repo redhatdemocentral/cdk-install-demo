@@ -42,6 +42,19 @@ manage pods and node for running multiple pods.
      $ vagrant up 
 
 
+Notes
+-----
+Should your local network DNS not handle the resolution of the above address, giving you page not found errors, you can apply the
+following to your local hosts file:
+
+```
+$ sudo vi /etc/hosts
+
+# add host for CDK demo resolution.
+10.1.2.2   10.1.2.2   10.1.2.2
+```
+
+
 Supporting Articles
 -------------------
 - [Digital sign for Red Hat Container Development Kit (CDK)](http://www.schabell.org/2016/03/digital-sign-redhat-cdk.html)
