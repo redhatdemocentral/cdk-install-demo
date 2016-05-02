@@ -12,6 +12,7 @@ set SUPPORT_DIR=%PROJECT_HOME%support
 set PRJ_DIR=%PROJECT_HOME%projects
 set CDK_PLUGINS_DIR=%CDK_HOME%\cdk\plugins
 set CDK=cdk-2.0.0.zip
+set CDK_DOWNLOAD_LINK=https://access.redhat.com/downloads/content/293/ver=2/rhel---7/2.0.0/x86_64/product-software
 set WINDOWS_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-virtualbox.box
 set CDK_BOX_VERSION=cdkv2
 set VERSION=2.0.0
@@ -66,6 +67,7 @@ if exist %SRC_DIR%\%CDK% (
         echo.
 ) else (
         echo Need to download %CDK% package from the Customer Support Portal
+        echo %CDK_DOWNLOAD_LINK%
         echo and place it in the %SRC_DIR% directory to proceed...
         echo.
         GOTO :EOF
@@ -77,6 +79,7 @@ if exist %SRC_DIR%\%WINDOWS_BOX% (
         echo.
 ) else (
         echo Need to download %WINDOWS_BOX% package from the Customer Support Portal
+        echo %CDK_DOWNLOAD_LINK%
         echo and place it in the %SRC_DIR% directory to proceed...
         echo.
         GOTO :EOF
