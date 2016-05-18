@@ -52,9 +52,11 @@ echo
 
 # Ensure VirtualBox available.
 #
-command -v VirtualBox -h >/dev/null 2>&1 || { echo >&2 "VirtualBox is required but not installed yet... downlaod here: https://www.virtualbox.org/wiki/Downloads"; exit 1; }
-echo "VirtualBox is installed..."
-echo
+if [[ `uname` == 'Darwin' ]]; then
+	command -v VirtualBox -h >/dev/null 2>&1 || { echo >&2 "VirtualBox is required but not installed yet... downlaod here: https://www.virtualbox.org/wiki/Downloads"; exit 1; }
+	echo "VirtualBox is installed..."
+	echo
+fi
 
 # Ensure CDK downloaded.
 #
