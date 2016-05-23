@@ -117,10 +117,10 @@ echo "Copying over VagrantFile with rhel-ose larger memory settings..."
 echo
 cp $SUPPORT_DIR/$VAGRANTFILE $CDK_HOME/cdk/components/rhel/rhel-ose/Vagrantfile
 
-echo "Installing some Vagrant plugins..."
+echo "Installing provided Vagrant plugins..."
 echo
 cd $CDK_PLUGINS_DIR
-vagrant plugin install vagrant-registration vagrant-service-manager vagrant-sshfs
+vagrant plugin install *.gem 
 
 echo
 echo "Checking that plugins installed, looking for:"
