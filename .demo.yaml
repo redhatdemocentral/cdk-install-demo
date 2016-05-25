@@ -1,0 +1,10 @@
+id: cdk-install
+title: Red Hat Container Development Kit Easy Install Demo
+github_repo_url: https://github.com/redhatdemocentral/cdk-install-demo
+technologies:
+  - Red Hat CDK
+  - OpenShift Enterprise  
+summary: Project to automate the installation of Red Hat Container Development Kit (CDK) for application development activities on OpenShift.
+level: Beginner
+product: cdk
+author: Andrew Block, Eric D. Schabell
