@@ -72,6 +72,8 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - based on CDK 2.0.0 beta 4 and RHEL Vagrant boxes 7.2-13.
 
+[![Install video](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/cdk-install-video.png?raw=true)](https://vimeo.com/ericschabell/cdk-install-demo)
+
 ![Digital sign](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/red_hat_cdk_install_demo.jpg?raw=true)
 
 ![CDK OSE](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
