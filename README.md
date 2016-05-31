@@ -55,6 +55,8 @@ $ sudo vi /etc/hosts
 
 Supporting Articles
 -------------------
+- [Red Hat Container Development Kit installation in just minutes(video)](http://www.schabell.org/2016/05/redhat-cdk-installation-in-just-minutes-video.html)
+
 - [Digital sign for Red Hat Container Development Kit (CDK)](http://www.schabell.org/2016/03/digital-sign-redhat-cdk.html)
 
 - [How to install Red Hat Container Development Kit (CDK) in minutes](http://www.schabell.org/2016/02/howto-install-redhat-cdk-in-minutes.html)
