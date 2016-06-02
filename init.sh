@@ -9,6 +9,7 @@ SUPPORT_DIR=./support
 PRJ_DIR=./projects
 CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
 CDK=cdk-2.0.0.zip
+CDK_DOWNLOAD_LINK="https://access.redhat.com/downloads/content/293/ver=2/rhel---7/2.0.0/x86_64/product-software"
 OSX_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-virtualbox.box
 LINUX_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-libvirt.box
 VAGRANTFILE=VagrantFile-rhel-ose
@@ -65,6 +66,7 @@ if [[ -r $SRC_DIR/$CDK ]] || [[ -L $SRC_DIR/$CDK ]]; then
 	echo
 else
 	echo Need to download $CDK package from the Customer Portal 
+    echo $CDK_DOWNLOAD_LINK
 	echo and place it in the $SRC_DIR directory to proceed...
 	echo
 	exit
@@ -79,6 +81,7 @@ if [[ `uname` == 'Darwin' ]]; then
 	  echo
   else
 	  echo Need to download $OSX_BOX from the Customer Portal 
+      echo $CDK_DOWNLOAD_LINK
 	  echo and place it in the $SRC_DIR directory to proceed...
 	  echo
 	  exit
@@ -90,6 +93,7 @@ else
 	  echo
   else
 	  echo Need to download $LINUX_BOX from the Customer Portal 
+      echo $CDK_DOWNLOAD_LINK
 	  echo and place it in the $SRC_DIR directory to proceed...
 	  echo
 	  exit
