@@ -139,14 +139,14 @@ if [[ `uname` == 'Darwin' ]]; then
 	echo
   echo "Adding the RHEL Vagrant box..."
   echo
-  vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$OSX_BOX
+  vagrant box add $CDK_BOX_VERSION $SRC_DIR/$OSX_BOX
 else 
 	# Linux Vagrant box.
 	#
 	echo
   echo "Adding the libvirt Vagrant box..."
   echo
-  vagrant box add --name $CDK_BOX_VERSION $SRC_DIR/$LINUX_BOX
+  vagrant box add $CDK_BOX_VERSION $SRC_DIR/$LINUX_BOX
 fi
 
 if [ $? -ne 0 ]; then
