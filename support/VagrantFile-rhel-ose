@@ -44,22 +44,26 @@ Vagrant.configure(2) do |config|
   SHELL
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
-    echo "You can now access OpenShift console on: https://#{PUBLIC_ADDRESS}:8443/console"
-    echo
-    echo "Configured basic user: openshift-dev, Password: devel"
-    echo
-    echo "Configured cluster admin user: admin, Password: admin"
-    echo
-    echo "To use OpenShift CLI, run:"
-    echo "$ vagrant ssh"
-    echo "$ oc login"
-    echo
-    echo "To browse the OpenShift API documentation, follow this link:"
-    echo "http://openshift3swagger-claytondev.rhcloud.com"
-    echo
-    echo "Then enter this URL:"
-    echo https://#{PUBLIC_ADDRESS}:8443/swaggerapi/oapi/v1
-    echo "."
+    echo "==================================================================="
+    echo "=                                                                 ="
+    echo "=  Log in to the OpenShift console at:                            ="
+    echo "=                                                                 ="
+    echo "=    https://#{PUBLIC_ADDRESS}:8443/console  (u:admin / p:admin)  ="
+    echo "=                                                                 ="
+    echo "=                                                                 ="
+    echo "=  To use OpenShift CLI, run:                                     ="
+    echo "=                                                                 ="
+    echo "=    $ vagrant ssh                                                ="
+    echo "=    $ oc login                                                   ="
+    echo "=                                                                 ="
+    echo "=                                                                 ="
+    echo "=  See Red Hat Demo Central for fully automated example projects  ="
+    echo "=  to get you started with containerized application development  ="
+    echo "=  in the Cloud: http://github.com/redhatdemocentral              ="
+    echo "=                                                                 ="
+    echo "=  The Red Hat Container Development Kit (CDK) setup complete!    ="
+    echo "=                                                                 ="
+    echo "==================================================================="
   SHELL
 
 end
