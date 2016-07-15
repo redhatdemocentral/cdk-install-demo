@@ -8,13 +8,13 @@ SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
 CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
-CDK=cdk-2.0.0.zip
-CDK_DOWNLOAD_LINK="https://access.redhat.com/downloads/content/293/ver=2/rhel---7/2.0.0/x86_64/product-software"
-OSX_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-virtualbox.box
-LINUX_BOX=rhel-cdk-kubernetes-7.2-23.x86_64.vagrant-libvirt.box
+CDK=cdk-2.1.0.zip
+CDK_DOWNLOAD_LINK="http://developers.redhat.com/download-manager/file//cdk-2.1.0.zip"
+OSX_BOX=rhel-cdk-kubernetes-7.2-25.x86_64.vagrant-virtualbox.box
+LINUX_BOX=rhel-cdk-kubernetes-7.2-25.x86_64.vagrant-libvirt.box
 VAGRANTFILE=VagrantFile-rhel-ose
 CDK_BOX_VERSION=cdkv2
-VERSION=2.0.0
+VERSION=2.1.0
 
 # wipe screen.
 clear 

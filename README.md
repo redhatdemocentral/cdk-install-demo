@@ -13,7 +13,7 @@ Option 1 - Install on your machine
 
 2. Add products as needed, see installs directory for list, [free downloads here](http://developers.redhat.com/products/cdk/get-started/).
 
-3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
+3. Run 'init.sh' or 'init.bat' file. Windows init.bat will point you to the windows installer.
 
 4. Read and follow displayed instructions and enjoy the Red Hat Container Development Kit (CDK) on your local machine!
 
@@ -63,6 +63,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v1.5 - based on CDK 2.1.0 and RHEL Vagrant boxes 7.2-25. 
 
 - v1.4 - based on CDK 2.0.0 and RHEL Vagrant boxes 7.2-23. Patches and some clean up in OSE container startup.
 
