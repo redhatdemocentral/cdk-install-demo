@@ -61,7 +61,7 @@ docker-registry-1-deploy   0/1       DeadlineExceeded   0          9h
 docker-registry-2-gfgc3    1/1       Running            0          9h
 router-1-9ri9d             2/2       Running            0          9h
 
-oc delete pod router-1-9ri9d -n default
+$ oc delete pod router-1-9ri9d -n default
 ```
 
 This will restart the router and resolve your application URLs.
