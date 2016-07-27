@@ -50,6 +50,22 @@ $ sudo vi /etc/hosts
 10.1.2.2   10.1.2.2   10.1.2.2
 ```
 
+If you halt your CDK image, when restarting you may encounter 'Application is not available' when trying to reach a project URL,
+just locate and remove the router image as follows:
+
+```
+$ oc get pods -n default
+
+NAME                       READY     STATUS             RESTARTS   AGE
+docker-registry-1-deploy   0/1       DeadlineExceeded   0          9h
+docker-registry-2-gfgc3    1/1       Running            0          9h
+router-1-9ri9d             2/2       Running            0          9h
+
+oc delete pod router-1-9ri9d -n default
+```
+
+This will restart the router and resolve your application URLs.
+
 
 Supporting Articles
 -------------------
