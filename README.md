@@ -69,7 +69,11 @@ This will restart the router and resolve your application URLs.
 
 Supporting Articles
 -------------------
+- [Installing the Red Hat Container Development Kit 2.1 release](http://www.schabell.org/2016/07/installing-redhat-cdk-2-1-release.html)
+
 - [Red Hat Container Development Kit installation in just minutes(video)](http://www.schabell.org/2016/06/redhat-cdk-installation-in-just-minutes-video.html)
+
+- [Installing the Red Hat Container Development Kit 2.0 release](http://www.schabell.org/2016/04/installing-redhat-cdk-2-0-release.html)
 
 - [Digital sign for Red Hat Container Development Kit (CDK)](http://www.schabell.org/2016/03/digital-sign-redhat-cdk.html)
 
