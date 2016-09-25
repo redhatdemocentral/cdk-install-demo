@@ -80,6 +80,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.6 - based on CDK 2.2.0 and RHEL Vagrant boxes 7.2-29. 
+
 - v1.5 - based on CDK 2.1.0 and RHEL Vagrant boxes 7.2-25. 
 
 - v1.4 - based on CDK 2.0.0 and RHEL Vagrant boxes 7.2-23. Patches and some clean up in OSE container startup.

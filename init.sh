@@ -8,13 +8,13 @@ SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
 CDK_PLUGINS_DIR=$CDK_HOME/cdk/plugins
-CDK=cdk-2.1.0.zip
-CDK_DOWNLOAD_LINK="http://developers.redhat.com/download-manager/file//cdk-2.1.0.zip"
-OSX_BOX=rhel-cdk-kubernetes-7.2-25.x86_64.vagrant-virtualbox.box
-LINUX_BOX=rhel-cdk-kubernetes-7.2-25.x86_64.vagrant-libvirt.box
+CDK=cdk-2.2.0.zip
+CDK_DOWNLOAD_LINK="http://developers.redhat.com/download-manager/file/cdk-2.2.0.zip"
+OSX_BOX=rhel-cdk-kubernetes-7.2-29.x86_64.vagrant-virtualbox.box
+LINUX_BOX=rhel-cdk-kubernetes-7.2-29.x86_64.vagrant-libvirt.box
 VAGRANTFILE=VagrantFile-rhel-ose
 CDK_BOX_VERSION=cdkv2
-VERSION=2.1.0
+VERSION=2.2.0
 
 # wipe screen.
 clear 
@@ -117,7 +117,7 @@ unzip -q $SRC_DIR/$CDK -d $CDK_HOME
 
 # Add memory adjusted Vagrantfile for OSE image.
 #
-echo "Copying over VagrantFile with rhel-ose larger memory settings..."
+echo "Copying over VagrantFile for Red Hat Demo Central project sizings..."
 echo
 cp $SUPPORT_DIR/$VAGRANTFILE $CDK_HOME/cdk/components/rhel/rhel-ose/Vagrantfile
 
