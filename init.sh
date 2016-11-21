@@ -53,7 +53,7 @@ echo
 
 # Ensure VirtualBox available.
 #
-if [[ `uname` == 'Darwin' ]]; then
+if [ `uname` == 'Darwin' ]; then
 	command -v VirtualBox -h >/dev/null 2>&1 || { echo >&2 "VirtualBox is required but not installed yet... downlaod here: https://www.virtualbox.org/wiki/Downloads"; exit 1; }
 	echo "VirtualBox is installed..."
 	echo
@@ -61,7 +61,7 @@ fi
 
 # Ensure CDK downloaded.
 #
-if [[ -r $SRC_DIR/$CDK ]] || [[ -L $SRC_DIR/$CDK ]]; then
+if [ -r $SRC_DIR/$CDK ] || [ -L $SRC_DIR/$CDK ]; then
 	echo Product sources are present...
 	echo
 else
@@ -74,9 +74,9 @@ fi
 
 # Ensure correct Vagrant box downloaded.
 #
-if [[ `uname` == 'Darwin' ]]; then
+if [ `uname` == 'Darwin' ]; then
 	# OSX Vagrant box.
-	if [[ -r $SRC_DIR/$OSX_BOX ]] || [[ -L $SRC_DIR/$OSX_BOX ]]; then
+	if [ -r $SRC_DIR/$OSX_BOX ] || [ -L $SRC_DIR/$OSX_BOX ]; then
 		echo OSX Vagrant box present...
 	  echo
   else
@@ -88,7 +88,7 @@ if [[ `uname` == 'Darwin' ]]; then
   fi
 else
 	# Linux Vagrant box.
-	if [[ -r $SRC_DIR/$LINUX_BOX ]] || [[ -L $SRC_DIR/$LINUX_BOX ]]; then
+	if [ -r $SRC_DIR/$LINUX_BOX ] || [ -L $SRC_DIR/$LINUX_BOX ]; then
 		echo Linux Vagrant box present...
 	  echo
   else
@@ -102,7 +102,7 @@ fi
 
 # Remove the old insallation, if it exists.
 #
-if [[ -x $CDK_HOME ]]; then
+if [ -x $CDK_HOME ]; then
 	echo "  - removing existing installation..."
 	echo
 	rm -rf $CDK_HOME
@@ -138,7 +138,7 @@ vagrant plugin list
 # determine which Vagrant box to add.
 #
 cd ../../../
-if [[ `uname` == 'Darwin' ]]; then
+if [ `uname` == 'Darwin' ]; then
 	# OSX Vagrant box.
 	echo
   echo "Adding the RHEL Vagrant box..."
@@ -164,7 +164,7 @@ if [ $? -ne 0 ]; then
 	echo 
   echo "Cleanup done, re-trying the installation."
   echo
-	if [[ `uname` == 'Darwin' ]]; then
+	if [ `uname` == 'Darwin' ]; then
 		# OSX Vagrant box.
 	  echo
     echo "Adding the RHEL Vagrant box..."
