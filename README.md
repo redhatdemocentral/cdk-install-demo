@@ -1,3 +1,5 @@
+**This example project will not be maintained beyond Red Hat CDK 2.2.0
+
 Red Hat CDK Easy Install Demo
 =============================
 If you are looking to develop containerized applications for Red Hat Enterprise Linux systems, the Red Hat Container Development Kit (CDK) can help you by providing 
