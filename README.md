@@ -1,4 +1,5 @@
-**This example project will not be maintained beyond Red Hat CDK 2.2.0
+Note: This example project will not be maintained beyond Red Hat CDK 2.2.0
+--------------------------------------------------------------------
 
 Red Hat CDK Easy Install Demo
 =============================
