@@ -107,3 +107,5 @@ See the tagged releases for the following versions of the product:
 
 ![CDK OSE](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/cdk-ose.png?raw=true)
 
+![Cloud Suite](https://github.com/redhatdemocentral/cdk-install-demo/blob/master/docs/demo-images/rhcs-arch.png?raw=true)
+
